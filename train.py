@@ -14,6 +14,8 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
+os.makedirs('outputs', exist_ok = True)
+
 url = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
 ds = TabularDatasetFactory.from_delimited_files(path=url)
@@ -73,6 +75,8 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+
+    joblib.dump(value=model, filename='./outputs/hd_model.joblib')
 
 if __name__ == '__main__':
     main()
