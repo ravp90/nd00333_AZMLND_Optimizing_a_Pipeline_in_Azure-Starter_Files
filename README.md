@@ -6,9 +6,9 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+This dataset contains bank marketing data pertaining to individuals alongside the binary classification of whether they would subscribe to the bank. The aim of this study is to identify a model that can accurately use this information to correctly classify these individuals, and to then more broadly use the model to predict outcomes for future individuals captured in future marketing campaigns.
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best perfoming model was 
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
